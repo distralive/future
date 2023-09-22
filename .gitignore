@@ -169,4 +169,4 @@ dist
 .pnp.\*
 
 # migration files
-lib/db/drizzle/
+drizzle/
