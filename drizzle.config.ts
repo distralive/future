@@ -1,8 +1,8 @@
 import type { Config } from "drizzle-kit";
 
 export default {
-  out: "./lib/db/drizzle",
-  schema: "./lib/db/schema.ts",
+  out: "./src/lib/db/drizzle",
+  schema: "./src/lib/db/schema.ts",
   driver: "pg",
   dbCredentials: {
     connectionString: Bun.env.DATABASE_URL ?? "",
