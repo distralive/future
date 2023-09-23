@@ -7,6 +7,7 @@
     "db:generate": "drizzle-kit generate:pg --config=drizzle.config.ts"
   },
   "devDependencies": {
+    "@types/pg": "^8.10.2",
     "bun-types": "latest",
     "drizzle-kit": "^0.19.13"
   },
@@ -17,7 +18,7 @@
     "drizzle-orm": "^0.28.6",
     "hono": "^3.7.1",
     "nanoid": "^5.0.1",
-    "postgres": "^3.3.5",
+    "pg": "^8.11.3",
     "ulid": "^2.3.0"
   }
 }

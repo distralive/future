@@ -1,7 +1,11 @@
-import { drizzle, PostgresJsDatabase } from "drizzle-orm/postgres-js";
-import postgres from "postgres";
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Client } from "pg";
 
 const DATABASE_URL = Bun.env.DATABASE_URL ?? "";
 
-const sql = postgres(DATABASE_URL);
-export const db: PostgresJsDatabase = drizzle(sql);
+const client = new Client({
+  connectionString: DATABASE_URL,
+});
+
+await client.connect();
+export const db = drizzle(client);
